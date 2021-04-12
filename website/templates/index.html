@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<div>
+
+<h1>トップ画面です</h1>
+<p1>{{username}}さんようこそ！</p1>
+<img src ="{% static 'Django_image.jpg' %}"/>
+
+</div>
+
+{% endblock  %}

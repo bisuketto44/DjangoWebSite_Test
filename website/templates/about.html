@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load humanize%}
+
+{% block main %}
+<div1>
+    <h1>自己紹介画面です</h1>
+    <div>
+        <h2>実績</h2>
+        <p>現在時刻 / {% now "Y-m-d H時i分" %}です</p>
+        <p>今までに{{num_services| intcomma }}個のサービスを作りました</p>
+    </div>
+
+    <div>
+        <h2>使えるスキル</h2>
+        <ul>
+            {% for skill in skills %}
+            <li>{{skill}}</li>
+            {% empty %}
+            <li>スキルはありません</li>
+            {% endfor %}
+        </ul>
+
+        
+
+    </div>
+
+
+</div1>
+
+{% endblock main %}
